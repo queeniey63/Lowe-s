@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#ffffff !important;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Claim Your $750 Lowe's Gift Card</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background-color: #ffffff !important; color-scheme: light !important; }
+
+  body {
+    background-color: #ffffff !important;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a !important;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 480px;
+    padding: 0 0 60px;
+    background-color: #ffffff !important;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    padding: 32px 24px 22px;
+    background-color: #ffffff !important;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  /* Lowe's "L" badge */
+  .lowes-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #004990;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .lowes-badge span {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .lowes-wordmark {
+    font-size: 32px;
+    font-weight: 900;
+    color: #004990 !important;
+    letter-spacing: -0.5px;
+  }
+
+  .lowes-wordmark sup {
+    font-size: 14px;
+    font-weight: 700;
+    color: #004990 !important;
+    vertical-align: super;
+  }
+
+  .reward-amount {
+    font-size: 72px;
+    font-weight: 900;
+    color: #004990 !important;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -2px;
+  }
+
+  .reward-label {
+    font-size: 15px;
+    font-weight: 800;
+    color: #004990 !important;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+  }
+
+  .how-it-works-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1a1a1a !important;
+    margin-bottom: 18px;
+  }
+
+  /* ── STEPS ── */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 16px 22px;
+  }
+
+  .step {
+    background-color: #ffffff !important;
+    border: 1.5px solid #eeeeee !important;
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #004990 !important;
+    color: #ffffff !important;
+    font-size: 17px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-content h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a !important;
+    margin-bottom: 3px;
+  }
+
+  .step-content p {
+    font-size: 12px;
+    color: #888888 !important;
+    font-weight: 400;
+  }
+
+  /* ── CTA ── */
+  .cta-wrap { padding: 0 16px; }
+
+  .cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    background-color: #004990 !important;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 36px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0,73,144,0.35);
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+
+  .cta-btn:hover { background-color: #003370 !important; transform: translateY(-1px); }
+  .cta-btn:active { transform: translateY(0); }
+
+  /* ── FAQ ── */
+  .faq-section { padding: 0 16px; margin-bottom: 30px; }
+
+  .faq-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .faq-line { flex: 1; height: 1.5px; background-color: #004990 !important; opacity: 0.2; }
+
+  .faq-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a1a !important;
+    white-space: nowrap;
+  }
+
+  .faq-list {
+    border: 1.5px solid #eeeeee;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #ffffff !important;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .faq-item { border-bottom: 1px solid #f0f0f0; background-color: #ffffff !important; }
+  .faq-item:last-child { border-bottom: none; }
+
+  .faq-question {
+    width: 100%;
+    background-color: #ffffff !important;
+    border: none;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a !important;
+    cursor: pointer;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .faq-chevron { color: #004990 !important; font-size: 18px; flex-shrink: 0; transition: transform 0.25s ease; }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    font-size: 13px;
+    color: #666666 !important;
+    line-height: 1.65;
+    padding: 0 20px;
+    background-color: #ffffff !important;
+  }
+
+  .faq-item.open .faq-answer { max-height: 200px; padding: 0 20px 16px; }
+
+  @media (prefers-color-scheme: dark) {
+    html, body, .page, .header, .step, .faq-list, .faq-item, .faq-question, .faq-answer {
+      background-color: #ffffff !important;
+    }
+    .lowes-wordmark, .reward-amount, .reward-label, .faq-chevron { color: #004990 !important; }
+    .how-it-works-title, .step-content h3, .faq-title, .faq-question { color: #1a1a1a !important; }
+    .step-content p, .faq-answer { color: #666666 !important; }
+    .cta-btn { background-color: #004990 !important; color: #ffffff !important; }
+    .step-num { background-color: #004990 !important; color: #ffffff !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-row">
+      <div class="lowes-badge"><span>L</span></div>
+      <span class="lowes-wordmark">Lowe's<sup>®</sup></span>
+    </div>
+
+    <div class="reward-amount">$750</div>
+    <div class="reward-label">Lowe's Gift Card</div>
+
+    <div class="how-it-works-title">How It Works</div>
+  </div>
+
+  <!-- STEPS -->
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Click "Claim Now"</h3>
+        <p>Begin by clicking the button below.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Submit Your Info</h3>
+        <p>Enter your email and basic details.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Complete Offers</h3>
+        <p>Complete 4–5 sponsored offers.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>Receive Reward</h3>
+        <p>Complete the required steps to claim your $750 gift card.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <a href="https://trksy.org/aff_c?offer_id=3615&aff_id=188450" target="_blank" rel="noopener" class="cta-btn">Claim Now →</a>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <div class="faq-header">
+      <div class="faq-line"></div>
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-line"></div>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is this Lowe's gift card offer legitimate?
+          <span class="faq-chevron">⌄</span>
+        </button>
+        <div class="faq-answer">Yes. This is a verified sponsored reward program. Once you complete the required offers, your $750 Lowe's gift card will be delivered to your email.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How many offers do I need to complete?
+          <span class="faq-chevron">⌄</span>
+        </button>
+        <div class="faq-answer">You are required to complete 4–5 sponsored offers. The full list will be shown to you after you submit your details.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do I need to make a purchase?
+          <span class="faq-chevron">⌄</span>
+        </button>
+        <div class="faq-answer">Some sponsored offers may include paid participation. Please review each offer carefully before completing it.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I use the card in-store and online?
+          <span class="faq-chevron">⌄</span>
+        </button>
+        <div class="faq-answer">Yes. The $750 Lowe's gift card can be used at any Lowe's store location or on Lowes.com for eligible purchases.</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
